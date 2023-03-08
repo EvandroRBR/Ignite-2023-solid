@@ -10,6 +10,7 @@ interface RegisterUseCaseRequest {
 }
 
 export class RegisterUseCase {
+  // eslint-disable-next-line prettier/prettier
   constructor(private usersRepository: usersRepository) { }
 
   async execute({ name, email, password }: RegisterUseCaseRequest) {
@@ -18,7 +19,7 @@ export class RegisterUseCase {
     const userWithSameEmail = await this.usersRepository.findByEmail(email);
 
     if (userWithSameEmail) {
-      throw new UserAlreadyExistsError()
+      throw new UserAlreadyExistsError();
     }
 
     await this.usersRepository.create({
