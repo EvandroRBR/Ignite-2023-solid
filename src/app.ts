@@ -18,6 +18,6 @@ app.setErrorHandler((error, _, reply) => {
   if (env.NODE_ENV === 'production') {
     console.error(error);
   }
-
+  console.log(error);
   return reply.status(500).send({ message: 'Internal Server Error' });
 });
