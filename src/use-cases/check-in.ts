@@ -11,8 +11,7 @@ interface CheckInUseCaseRespose {
 }
 
 export class CheckInUseCase {
-  // eslint-disable-next-line prettier/prettier
-  constructor(private checkInsRepository: CheckInsRepository) { }
+  constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({
     userId,
