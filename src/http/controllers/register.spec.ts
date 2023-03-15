@@ -3,7 +3,7 @@ import request from 'supertest';
 
 import { app } from '@/app';
 
-describe('ok', () => {
+describe('Register (e2e)', () => {
   beforeAll(async () => {
     await app.ready();
   });
