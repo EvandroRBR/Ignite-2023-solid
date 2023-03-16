@@ -4,7 +4,7 @@ import request from 'supertest';
 import { app } from '@/app';
 import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user';
 
-describe('Nearby Gym (e2e)', () => {
+describe('Nearby Gyms (e2e)', () => {
   beforeAll(async () => {
     await app.ready();
   });
@@ -14,7 +14,7 @@ describe('Nearby Gym (e2e)', () => {
   });
 
   it('should be able to list nearby gyms', async () => {
-    const { token } = await createAndAuthenticateUser(app);
+    const { token } = await createAndAuthenticateUser(app, true);
 
     await request(app.server)
       .post('/gyms')
