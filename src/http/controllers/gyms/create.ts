@@ -15,7 +15,6 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
       return Math.abs(value) <= 180;
     }),
   });
-  console.log('testeeeeeeeeeeeeeeeeee');
 
   const { title, description, phone, latitude, longitude } =
     createGymBodySchema.parse(request.body);
