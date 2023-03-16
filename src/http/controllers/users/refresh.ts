@@ -34,5 +34,7 @@ export async function refresh(request: FastifyRequest, reply: FastifyReply) {
       httpOnly: true,
     })
     .status(200)
-    .send({ token });
+    .send({
+      token,
+    });
 }

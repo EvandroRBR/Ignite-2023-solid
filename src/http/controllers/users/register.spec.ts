@@ -9,7 +9,7 @@ describe('Register (e2e)', () => {
   });
 
   afterAll(async () => {
-    app.close();
+    await app.close();
   });
 
   it('should be able to register', async () => {

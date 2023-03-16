@@ -7,7 +7,7 @@ import { create } from './create';
 import { search } from './search';
 import { nearby } from './nearby';
 
-export async function gymRoutes(app: FastifyInstance) {
+export async function gymsRoutes(app: FastifyInstance) {
   app.addHook('onRequest', verifyJWT);
 
   app.post('/gyms', { onRequest: [verifyUserRole('ADMIN')] }, create);
